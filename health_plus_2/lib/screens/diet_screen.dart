@@ -4,7 +4,7 @@ import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 import '../constants.dart';
 
 class DietScreen extends StatefulWidget {
-  static String id = 'diet_screen';
+  static String id = 'Diet_screen';
 
   @override
   _DietScreenState createState() => _DietScreenState();
