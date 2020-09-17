@@ -1,23 +1,52 @@
 # HealthPlus
- HealthPlus is a fitness app developed in flutter as a semester project.
+ HealthPlus is a android fitness app developed in flutter as a semester project.
  
 # Table Of Contents
+- [Getting Started](#getting started)
 - [Features](#features)
 - [Usage](#usage)
+- [Future Plans](#future plans)
 - [Team](#team)
+- [Support](#support)
+
+
+# Getting Started
+
+1. Install [Android Studio](https://developer.android.com/studio) and [Flutter](https://flutter.dev/) plugin in your workstation.
+2. Download this project.
+3. Open up the project in Android Studio.
+4. Go to Settings and -  File -> Import -> "Existing Projects into your workspace".
+5. Make sure Android SDK path is directed appropriately.
+At this point, you should be able to run the app using your android device or emulator.
 
 # Features
 
-It includes the following features:
+The app has the following features:
  
-Steps Tracker,
-Calorie Counter,
-Diet Tracker,
-BMI Calculator,
-Sleep Tracker,
-Water Intake Reminder,
-Detailed daily/weekly/monthly Report.
+1. Steps Tracker,
+2. Calorie Counter,
+3. Diet Tracker,
+4. BMI Calculator,
+5. Water Intake Reminder,
+6. Detailed daily/weekly/monthly report of all these.
 
 # Usage
 
+1. When the application is opened, the dashboard will pop up after displaying the splash screen.
+
+# Future Plans
+
+1. Implementing Sleep Tracker.
+2. Detailed Individual User Reports.
+
+
 # Team
+
+Bhuiyan Sanjid Shafique - 170041029
+Nur E Alam Siddiqi - 170041057
+Tauhid Mostahid - 170041059
+
+# Support
+
+[Flutter](https://flutter.dev/)
+
