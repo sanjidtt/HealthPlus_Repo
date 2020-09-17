@@ -34,6 +34,33 @@ The app has the following features:
 
 1. When the application is opened, the dashboard will pop up after displaying the splash screen.
 
+2. The dashboard has 6 tabs - Steps, Water, Sleep, Diet, Calorie, BMI.
+
+3. **Clicking on Steps:**
+ - Shows how many km you have walked on that day.
+ - Tap 'Set Goal' button to set a goal.
+ - Day, Week and Month sub bars contain detailed report and graph of number of steps taken.
+ - This part of the app uses accelerometer of your smartphone.
+ 
+4. **Clicking on Water:**
+ - Shows your daily water intake.
+ - You can add every water intake in mL.
+ - Set a daily goal for water intake.
+ - The Misc page lets you to set up a notification system for reminding you to intake liquids; insert time in minutes.
+ 
+5. **Clicking on Sleep:**
+ - COMING SOON!
+ 
+6. **Clicking on Diet:**
+ - Records calorie intake.
+ - Displays individual calorie counters for breakfast, lunch, snacks and dinner.
+ - Tap Add Food to select the food you have eaten. The app determines a probable calorie intake based on your choice.
+ - Shows individual carbohydrate, protein and fat intake in grams.
+ 
+7. **Clicking on BMI:**
+ - Takes you to a screen and lets you input your gender, age, height (in feets and inches), and weight (in kg).
+ - Calculates your BMI based on the input and shows the BMI range you fall in.
+
 ## Future Plans
 
 1. Implementing Sleep Tracker.
