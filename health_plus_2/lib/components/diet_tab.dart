@@ -85,7 +85,7 @@ class DietTab extends StatelessWidget {
                     trackColor: Color(0XFFF2F2F2),
                   ),
                   infoProperties: InfoProperties(
-                    modifier: percentageModifier,
+                    modifier: percentageModifierDiet,
                     bottomLabelText: 'Steps',
                     bottomLabelStyle: TextStyle(
                       color: Color(0XFFC1C4C7),

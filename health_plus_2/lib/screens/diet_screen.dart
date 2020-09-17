@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sleek_circular_slider/sleek_circular_slider.dart';
+import 'package:health_plus_2/components/diet_lower_card.dart';
+import 'package:health_plus_2/components/diet_upper_card.dart';
 
-import '../constants.dart';
+import 'diet_addfood_screen.dart';
 
 class DietScreen extends StatefulWidget {
   static String id = 'diet_screen';
@@ -17,41 +18,59 @@ class _DietScreenState extends State<DietScreen> {
   }
 
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Scaffold(
-        body: Container(
-          color: Colors.redAccent,
-          child: Center(
-            child: SleekCircularSlider(
-              min: 0.0,
-              max: 7000.0,
-              initialValue: 3500.0,
-              appearance: CircularSliderAppearance(
-                angleRange: 360.0,
-                startAngle: 90,
-                customWidths: CustomSliderWidths(
-                  progressBarWidth: 7.0,
-                  trackWidth: 2.5,
-                  handlerSize: 3.0,
-                ),
-                customColors: CustomSliderColors(
-                  progressBarColor: Color(0XFFBB66CC),
-                  trackColor: Color(0XFFF2F2F2),
-                ),
-                infoProperties: InfoProperties(
-                  modifier: percentageModifier,
-                  bottomLabelText: 'Steps',
-                  bottomLabelStyle: TextStyle(
-                    color: Color(0XFFC1C4C7),
+    return Scaffold(
+      backgroundColor: Color(0XFFF2F3F8),
+      body: Column(
+        children: <Widget>[
+          Expanded(
+            flex: 87,
+            child: Container(),
+          ),
+          Expanded(
+            flex: 236,
+            child: DietUpperCard(),
+          ),
+          Expanded(
+            flex: 74,
+            child: Container(),
+          ),
+          Expanded(
+            flex: 180,
+            child: DietLowerCard(),
+          ),
+          Expanded(
+            flex: 88,
+            child: Container(
+              width: (MediaQuery.of(context).size.width) * (16 / 19),
+              //height: (MediaQuery.of(context).size.height) * (2 / 19),
+              margin: EdgeInsets.fromLTRB(0, 15, 0, 15),
+              child: FlatButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, DietAddFoodScreen.id);
+                  print('ADD FOOD');
+                },
+                child: Text(
+                  'ADD FOOD',
+                  style: TextStyle(
+                    color: Colors.green,
+                    letterSpacing: 1.5,
+                    fontSize: 25,
+                    fontWeight: FontWeight.w900,
                   ),
-                  mainLabelStyle: TextStyle(
-                    fontSize: 20,
+                ),
+                textColor: Colors.white,
+                shape: RoundedRectangleBorder(
+                  side: BorderSide(
+                    color: Colors.green,
+                    width: 2,
+                    style: BorderStyle.solid,
                   ),
+                  borderRadius: BorderRadius.circular(50),
                 ),
               ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }

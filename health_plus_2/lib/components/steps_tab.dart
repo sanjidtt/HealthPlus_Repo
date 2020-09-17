@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
 
-import '../constants.dart';
-
 class StepsTab extends StatelessWidget {
-  StepsTab({this.iconLogo, this.textHeading, this.backgroundCol});
+  StepsTab(
+      {this.iconLogo, this.textHeading, this.backgroundCol, this.stepsVarTab});
 
   final Icon iconLogo;
   final String textHeading;
   final Color backgroundCol;
+  final int stepsVarTab;
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +68,7 @@ class StepsTab extends StatelessWidget {
               child: SleekCircularSlider(
                 min: 0.0,
                 max: 7000.0,
-                initialValue: stepcount,
+                initialValue: stepsVarTab.toDouble(),
                 appearance: CircularSliderAppearance(
                   angleRange: 360.0,
                   startAngle: 90,
@@ -82,7 +82,7 @@ class StepsTab extends StatelessWidget {
                     trackColor: Color(0XFFF2F2F2),
                   ),
                   infoProperties: InfoProperties(
-                    modifier: percentageModifier,
+                    modifier: percentageModifier2,
                     bottomLabelText: 'Steps',
                     bottomLabelStyle: TextStyle(
                       color: Color(0XFFC1C4C7),
@@ -102,5 +102,11 @@ class StepsTab extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  String percentageModifier2(double value) {
+    value = stepsVarTab.toDouble();
+    final roundedValue = value.ceil().toInt().toString();
+    return '$roundedValue';
   }
 }

@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
+import 'package:http/http.dart' as http;
 import 'package:jiffy/jiffy.dart';
 import 'package:pedometer/pedometer.dart';
 import 'package:sleek_circular_slider/sleek_circular_slider.dart';
@@ -16,6 +17,16 @@ class StepsCount extends StatefulWidget {
 }
 
 class _StepsCountState extends State<StepsCount> {
+  addStepMethod(String stepVarID, String stepVarDate, String stepsVar) {
+    print(stepVarDate);
+    var url = 'http://192.168.0.103/Test_localhost/insertSteps.php';
+    http.post(url, body: {
+      'STEP_ID': stepVarID,
+      'STEP_DATE': stepVarDate,
+      'STEPS_STEP': stepsVar,
+    });
+  }
+
   Pedometer _pedometer;
   StreamSubscription<int> _subscription;
   Box<int> stepsBox = Hive.box('steps');
@@ -116,9 +127,12 @@ class _StepsCountState extends State<StepsCount> {
 
     setState(() {
       todaySteps = value - savedStepsCount;
+
       if (todaySteps > maxValue) {
         todaySteps = maxValue.toInt();
       }
+
+      addStepMethod(stepID, stepDate, todaySteps.toString());
     });
     stepsBox.put(todayDayNo, todaySteps);
     return todaySteps; // this is your daily steps value.
