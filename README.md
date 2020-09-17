@@ -1,12 +1,12 @@
-##HealthPlus
+# HealthPlus
  HealthPlus is a fitness app developed in flutter as a semester project.
  
-##Table Of Contents
+# Table Of Contents
 - [Features](#features)
 - [Usage](#usage)
 - [Team](#team)
 
-##Features
+# Features
 
 It includes the following features:
  
@@ -18,6 +18,6 @@ Sleep Tracker,
 Water Intake Reminder,
 Detailed daily/weekly/monthly Report.
 
-##Usage
+# Usage
 
-##Team
+# Team
