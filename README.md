@@ -2,10 +2,10 @@
  HealthPlus is a android fitness app developed in flutter as a semester project.
  
 # Table Of Contents
-- [Getting Started](#getting started)
+- [Getting Started](#gettingStarted)
 - [Features](#features)
 - [Usage](#usage)
-- [Future Plans](#future plans)
+- [Future Plans](#futurePlans)
 - [Team](#team)
 - [Support](#support)
 
@@ -42,11 +42,14 @@ The app has the following features:
 
 # Team
 
-Bhuiyan Sanjid Shafique - 170041029
-Nur E Alam Siddiqi - 170041057
-Tauhid Mostahid - 170041059
+- Bhuiyan Sanjid Shafique - 170041029
+- Nur E Alam Siddiqi - 170041057
+- Tauhid Mostahid - 170041059
+
+5th Semester, Department of CSE, Islamic University of Technology.
 
 # Support
 
-[Flutter](https://flutter.dev/)
+- [Flutter](https://flutter.dev/)
+- [Android Studio](https://developer.android.com/studio)
 
