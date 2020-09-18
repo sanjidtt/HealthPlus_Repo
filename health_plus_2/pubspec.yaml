@@ -38,7 +38,7 @@ dependencies:
   syncfusion_flutter_charts: ^17.4.40
   vector_math: ^2.0.8
   rflutter_alert: ^1.0.3
-  shared_preferences: ^0.5.7
+  shared_preferences: ^0.5.10
   flutter_local_notifications: ^1.4.1
   material_design_icons_flutter: ^4.0.5145
   percent_indicator: ^2.1.6
