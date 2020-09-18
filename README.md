@@ -79,7 +79,6 @@ The app has the following features:
 
 - [Flutter](https://flutter.dev/)
 - [Android Studio](https://developer.android.com/studio)
-- Fastai
-- Starlette
-- 
+- [fast.ai](https://www.fast.ai)
+- [Starlette](https://www.starlette.io/)
 
