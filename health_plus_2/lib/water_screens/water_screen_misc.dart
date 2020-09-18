@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 
 class WaterMisc extends StatefulWidget {
-  bool isSwitched = false;
+
   int timeNotify = 1;
 
   @override
@@ -14,7 +14,7 @@ class _WaterMiscState extends State<WaterMisc> {
       FlutterLocalNotificationsPlugin();
 
   initializeNotifications() async {
-    var initializeAndroid = AndroidInitializationSettings('app_icon');
+    var initializeAndroid = AndroidInitializationSettings('ic_launcher');
     var initializeIOS = IOSInitializationSettings();
     var initSettings = InitializationSettings(initializeAndroid, initializeIOS);
     await localNotificationsPlugin.initialize(initSettings);
@@ -47,15 +47,14 @@ class _WaterMiscState extends State<WaterMisc> {
   final textController = TextEditingController();
 
   triggerNotification() async {
-    if (widget.isSwitched) {
-      print(widget.timeNotify);
+
       int time = widget.timeNotify * 60;
       DateTime now = DateTime.now().toUtc().add(
             Duration(seconds: time),
           );
 
       await singleNotification(now, "REMINDER!", "DRINK YOUR WATER!", 98123871);
-    }
+
   }
 
   @override
@@ -125,20 +124,37 @@ class _WaterMiscState extends State<WaterMisc> {
                           style: TextStyle(
                               fontSize: 15, fontWeight: FontWeight.w400),
                         ),
-                        Switch(
+                        SizedBox(
+                          width: 10,
+                        ),
+                        FloatingActionButton(
+                          elevation: 0.5,
+                          child: Icon(Icons.notifications_active),
+                          onPressed: (){
+                            setState(() {
+                              triggerNotification();
+                              widget.timeNotify = int.parse(textController.text);
+                              textController.clear();
+                            });
+                          },
+
+                        ),
+                        /*Switch(
                           value: widget.isSwitched,
                           onChanged: (value) {
                             setState(() {
                               widget.isSwitched = value;
-                              triggerNotification();
-                              widget.timeNotify =
-                                  int.parse(textController.text);
-                              textController.clear();
+                              if(widget.isSwitched) {
+                                triggerNotification();
+                                widget.timeNotify =
+                                    int.parse(textController.text);
+                                textController.clear();
+                              }
                             });
                           },
                           activeColor: Colors.blue,
                           activeTrackColor: Colors.blueAccent,
-                        ),
+                        ),*/
                       ],
                     ),
                     SizedBox(
