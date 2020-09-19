@@ -1,6 +1,18 @@
 import 'package:http/http.dart' as http;
 import 'package:intl/intl.dart';
 
+///...Water...
+
+int inputAmount = 250;
+int dailyGoal = 2500;
+int drinkAmount = 0;
+double ratio = 0.0;
+int inputSlider = 1200;
+
+
+///..............
+
+
 ///...Registration_1...
 String regUsername1;
 String regEmail1;
