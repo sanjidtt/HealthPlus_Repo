@@ -2,13 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:liquid_progress_indicator/liquid_progress_indicator.dart';
 import 'package:material_design_icons_flutter/material_design_icons_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:health_plus_2/constants.dart';
 
 class WaterHome extends StatefulWidget {
-  int inputAmount = 250;
-  int dailyGoal = 2500;
-  int drinkAmount = 0;
-  double ratio = 0.0;
-  int inputSlider = 1200;
+
 
   @override
   _WaterHomeState createState() => _WaterHomeState();
@@ -24,7 +21,7 @@ class _WaterHomeState extends State<WaterHome> {
   void setValues() async {
     final prefs = await SharedPreferences.getInstance();
     final key = 'drink';
-    final value = widget.drinkAmount;
+    final value = drinkAmount;
     prefs.setInt(key, value);
     //print("set $value");
   }
@@ -33,8 +30,8 @@ class _WaterHomeState extends State<WaterHome> {
     final prefs = await SharedPreferences.getInstance();
     final key = 'drink';
     final value = prefs.getInt(key) ?? 0;
-    widget.drinkAmount = value;
-    widget.ratio = widget.drinkAmount / widget.dailyGoal;
+    drinkAmount = value;
+    ratio = drinkAmount / dailyGoal;
 
     //print("get $value");
   }
@@ -72,16 +69,16 @@ class _WaterHomeState extends State<WaterHome> {
                             color: Color(0xFFf2f2f2),
                           ),
                           child: LiquidCircularProgressIndicator(
-                            value: widget.ratio,
+                            value: ratio,
                             //valueColor: AlwaysStoppedAnimation(Colors.red),
                             borderColor: Colors.black,
                             borderWidth: 1.5,
                             direction: Axis.vertical,
                             backgroundColor: Colors.white70,
                             center: Text(
-                              widget.drinkAmount.toString() +
+                              drinkAmount.toString() +
                                   "/" +
-                                  widget.dailyGoal.toString() +
+                                  dailyGoal.toString() +
                                   "mL",
                               style:
                                   TextStyle(fontSize: 10, color: Colors.black),
@@ -116,7 +113,7 @@ class _WaterHomeState extends State<WaterHome> {
                       FloatingActionButton(
                         onPressed: () {
                           setState(() {
-                            widget.inputAmount -= 50;
+                            inputAmount -= 50;
                           });
                         },
                         heroTag: "bleh1",
@@ -135,7 +132,7 @@ class _WaterHomeState extends State<WaterHome> {
                           ),
                           child: Center(
                             child: Text(
-                              widget.inputAmount.toString() + "mL",
+                              inputAmount.toString() + "mL",
                               style: TextStyle(
                                   fontSize: 12, color: Colors.blueGrey),
                             ),
@@ -145,7 +142,7 @@ class _WaterHomeState extends State<WaterHome> {
                       FloatingActionButton(
                         onPressed: () {
                           setState(() {
-                            widget.inputAmount += 50;
+                            inputAmount += 50;
                           });
                         },
                         heroTag: "bleh2",
@@ -160,8 +157,8 @@ class _WaterHomeState extends State<WaterHome> {
                   FloatingActionButton(
                     onPressed: () async {
                       setState(() {
-                        widget.drinkAmount += widget.inputAmount;
-                        widget.ratio = widget.drinkAmount / widget.dailyGoal;
+                        drinkAmount += inputAmount;
+                        ratio = drinkAmount / dailyGoal;
                         setValues();
                       });
                     },
@@ -205,7 +202,7 @@ class _WaterHomeState extends State<WaterHome> {
                         width: 140,
                         child: Center(
                           child: Text(
-                            widget.inputSlider.toString() + "mL",
+                            inputSlider.toString() + "mL",
                             style: TextStyle(
                                 fontSize: 35,
                                 color: Colors.blueAccent,
@@ -235,13 +232,13 @@ class _WaterHomeState extends State<WaterHome> {
                       inactiveTickMarkColor: Colors.grey,
                     ),
                     child: Slider(
-                      value: widget.inputSlider.toDouble(),
+                      value: inputSlider.toDouble(),
                       min: 1200,
                       max: 4000,
                       divisions: 56,
                       onChanged: (value) {
                         setState(() {
-                          widget.inputSlider = value.floor();
+                          inputSlider = value.floor();
                         });
                       },
                     ),
@@ -258,8 +255,8 @@ class _WaterHomeState extends State<WaterHome> {
                       mini: true,
                       onPressed: () {
                         setState(() {
-                          widget.dailyGoal = widget.inputSlider;
-                          widget.ratio = widget.drinkAmount / widget.dailyGoal;
+                          dailyGoal = inputSlider;
+                          ratio = drinkAmount / dailyGoal;
                         });
                       },
                     ),
