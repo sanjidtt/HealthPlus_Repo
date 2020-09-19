@@ -32,6 +32,11 @@ class _WaterHomeState extends State<WaterHome> {
     final value = prefs.getInt(key) ?? 0;
     drinkAmount = value;
     ratio = drinkAmount / dailyGoal;
+    
+    setState(() {
+      drinkAmount = value;
+      ratio = drinkAmount / dailyGoal;
+    });
 
     //print("get $value");
   }
