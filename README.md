@@ -35,6 +35,7 @@ The app has the following features:
 1. When the application is opened, the dashboard will pop up after displaying the splash screen.
 
 2. The dashboard has 6 tabs - Steps, Water, Sleep, Diet, Calorie, BMI.
+https://github.com/sanjidtt/HealthPlus_Repo/blob/master/Demo_Image/Picture1.png?raw=true
 
 3. **Clicking on Steps:**
  - Shows how many km you have walked on that day.
