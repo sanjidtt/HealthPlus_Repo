@@ -42,6 +42,7 @@ The app has the following features:
  - Tap 'Set Goal' button to set a goal.
  - Day, Week and Month sub bars contain detailed report and graph of number of steps taken.
  - This part of the app uses accelerometer of your smartphone.
+ 
 ![Dashboard_picture](/Demo_Images/Picture2.png)
 ![Dashboard_picture](/Demo_Images/Picture3.png)
 ![Dashboard_picture](/Demo_Images/Picture4.png)
