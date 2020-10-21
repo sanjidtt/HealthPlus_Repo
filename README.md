@@ -35,7 +35,9 @@ The app has the following features:
 1. When the application is opened, the dashboard will pop up after displaying the splash screen.
 
 2. The dashboard has 6 tabs - Steps, Water, Sleep, Diet, Calorie, BMI.
+
 ![Dashboard_picture](/Demo_Images/Picture1.png)
+
 
 3. **Clicking on Steps:**
  - Shows how many km you have walked on that day.
@@ -46,13 +48,16 @@ The app has the following features:
 ![Dashboard_picture](/Demo_Images/Picture2.png)
 ![Dashboard_picture](/Demo_Images/Picture3.png)
 ![Dashboard_picture](/Demo_Images/Picture4.png)
+
  
 4. **Clicking on Water:**
  - Shows your daily water intake.
  - You can add every water intake in mL.
  - Set a daily goal for water intake.
  - The Misc page lets you to set up a notification system for reminding you to intake liquids; insert time in minutes.
+ 
 ![Dashboard_picture](/Demo_Images/Picture10.png)
+
  
 5. **Clicking on Sleep:**
  - COMING SOON!
@@ -62,17 +67,21 @@ The app has the following features:
  - Displays individual calorie counters for breakfast, lunch, snacks and dinner.
  - Tap Add Food to select the food you have eaten. The app determines a probable calorie intake based on your choice.
  - Shows individual carbohydrate, protein and fat intake in grams.
+ 
 ![Dashboard_picture](/Demo_Images/Picture5.png)
 ![Dashboard_picture](/Demo_Images/Picture6.png)
 ![Dashboard_picture](/Demo_Images/Picture7.png)
 ![Dashboard_picture](/Demo_Images/Picture8.png)
 ![Dashboard_picture](/Demo_Images/Picture9.png)
+
  
 7. **Clicking on BMI:**
  - Takes you to a screen and lets you input your gender, age, height (in feets and inches), and weight (in kg).
  - Calculates your BMI based on the input and shows the BMI range you fall in.
+ 
 ![Dashboard_picture](/Demo_Images/Picture11.png)
 ![Dashboard_picture](/Demo_Images/Picture12.png)
+
 
 
 ## Future Plans
